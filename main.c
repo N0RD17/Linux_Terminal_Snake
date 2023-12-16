@@ -315,7 +315,6 @@ int main(void)
    while(!gameOver)
    {
       drawGame(&snake);
-
       getInput(&snake);
       updateGame(&snake);
    }
