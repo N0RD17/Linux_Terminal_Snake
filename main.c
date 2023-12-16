@@ -7,7 +7,7 @@
 #include <errno.h>
 
 #include <termios.h>	// For terminal controls
-#include <unistd.h>		// POSIX API
+#include <unistd.h>	// POSIX API
 
 
 
@@ -115,14 +115,12 @@ struct Point{
    int x, y;
 };
 
-
 struct Snake{
    struct Point head;
    struct Point body[100];
    int length;
    enum Direction direction;
 };
-
 
 struct Point food;
 int gameOver = 0;
@@ -321,14 +319,6 @@ int main(void)
       getInput(&snake);
       updateGame(&snake);
    }
-
-//   while(1)
-//   {
-//      char c = '\0';
-//      c = read_input();
-//
-//      if(c == 'q') break;
-//   }
 
    puts("Game Over!\n");
 
